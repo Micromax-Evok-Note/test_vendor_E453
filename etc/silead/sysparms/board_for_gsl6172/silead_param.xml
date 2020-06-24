@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device name="GSL6162" dev_ver="0x61">
+    <param>
+        <version>1.0</version>
+        <i0cFixedM>22</i0cFixedM>
+        <ib8FixedM>22</ib8FixedM>
+        <i0cMatchTuneDownM>22</i0cMatchTuneDownM>
+        <i0cMatchTuneUpM>22</i0cMatchTuneUpM>
+    </param>
+    <sizeinfo>
+        <width>10</width>
+        <height>10</height>
+        <up>1</up>
+        <down>1</down>
+        <left>1</left>
+        <right>1</right>
+    </sizeinfo>
+    <SysParam>
+        <fftMin>1</fftMin>
+        <covMin>1</covMin>
+        <bright>1</bright>
+        <dark>1</dark>
+        <mean>1</mean>
+        <var>1</var>
+    </SysParam>
+    <registers>
+        <normal_mode>
+		    <register val="0x000000E0">0x00000010</register>
+		    <register val="0xFF0800D4">0x00000001</register>
+		    <register val="0xFF08001C">0x0A805018</register>
+		    <register val="0xFF0000B0">0x00010060</register>
+		    <register val="0xFF08000C">0x00000048</register>
+		    <register val="0xFF0000B8">0x00108044</register>
+		    <register val="0xff0000a8">0x00080246</register>
+		    <register val="0xff0000ac">0x01000000</register>
+		    <register val="0xff0000bc">0x100a0040</register>
+		    <register val="0xff0000c0">0x00000010</register>
+		    <register val="0xFF000004">0x00010000</register>
+		    <register val="0xFF00001C">0x00000021</register>
+		    <register val="0xff080004">0x00000004</register>
+		    <register val="0xff080010">0x00030002</register>
+		    <register val="0xff0800ac">0x10020000</register>
+		    <register val="0xff080014">0x0c000010</register>
+		    <register val="0xff080018">0x00020010</register>
+		    <register val="0xff08001c">0x0a80500c</register>
+		    <register val="0xFF080000">0x00020000</register>
+        </normal_mode>
+        <stop_mode>
+		    <register val="0xFF080000">0x00020001</register>
+        </stop_mode>
+        <start_frm_mode>
+		    <register val="0xff080024">0x2007ffff</register>
+        </start_frm_mode>
+    </registers>
+    <op_registers>
+        <fine_tune_reg_dac>0xff08000c</fine_tune_reg_dac>
+        <fine_tune_reg_ag20>0xff000020</fine_tune_reg_ag20>
+        <fine_tune_reg_ag2c>0xff08002c</fine_tune_reg_ag2c>
+        <sleep_threshold_reg>0xff080034</sleep_threshold_reg>
+        <!--only in interrupt mode-->
+        <fine_tune_adc_regs_on>1</fine_tune_adc_regs_on>
+        <fine_tune_adc_regs>
+		    <register val="0xff08000c">0</register>
+        </fine_tune_adc_regs>
+		<chiptest_mode_regs_r>0xC0</chiptest_mode_regs_r>
+		<chiptest_mode_regs_w>0X80</chiptest_mode_regs_w>
+		<check_int_mode_regs>0xff0800d4</check_int_mode_regs>
+		<start_frm_reg>0xff080024</start_frm_reg>
+		<start_frm_value>0x20380000</start_frm_value>
+    </op_registers>
+</device>
